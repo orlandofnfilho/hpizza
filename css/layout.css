@@ -1,0 +1,595 @@
+@charset "UTF-8";
+/* formatações gerais */
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* formatações da section top */
+
+section#top {
+    background-color: rgba(255, 159, 70, 0.8);
+    height: 31em;
+    padding-bottom: 30px;
+}
+
+section#top nav {
+    background-color: rgba(255, 159, 70, 0.8);
+    padding: 1.25em;
+    height: 6.5em;
+}
+
+section#top nav ul li a {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+div#letrasbanner {
+    position: relative;
+    margin-top: 80px;
+    margin-right: 100px;
+}
+
+section#top nav ul li:nth-child(4) {
+    border-left: 1px solid white;
+}
+
+/* categorias */
+
+section#categorias {
+    background-color: #fff;
+}
+
+/* Pagina sobre */
+
+div#sobre h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+}
+
+img#logosobre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+div#sobre {
+    background-color: #fff;
+    max-width: 1000px;
+    padding: 15px;
+    border-style: solid;
+    border-color: #ff9f46;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+div#sobre p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4d4d4d;
+}
+
+/* Login modal */
+
+a.btn {
+    font-family: 'Montserrat', sans-serif !important;
+    margin-top: 30%;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.modal {
+    max-width: 30%;
+    max-height: 100%;
+}
+
+input[type="submit"] {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #fff;
+    width: 100%;
+    margin-top: 40px;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.recuperar {
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 3%;
+}
+
+.cadastrar {
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 3%;
+}
+
+#msgError {
+    font-family: 'Montserrat', sans-serif !important;
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+/* container mid */
+
+div#termos, div#cardapio, div#sobre, div#cadastro, div#carrinho, div#politicas {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #fff;
+    max-width: 1000px;
+    padding: 15px;
+    border-style: solid;
+    border-color: #ff9f46;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+div#carrinho h4, div#termos h4, div#cardapio h4, div#sobre h4, div#cadastro h4, div#carrinho h4, div#politicas h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    text-align: left;
+}
+
+div#carrinho p {
+    font-family: 'Montserrat', sans-serif !important;
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 1em;
+}
+
+div#carrinho a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#cardapio {
+    background-color: #fff;
+    max-width: 1920px;
+    padding: 15px;
+    border-style: solid;
+    border-color: #ff9f46;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+div#recuperarsenha {
+    background-color: #fff;
+    max-width: 700px;
+    padding: 15px;
+    border-style: solid;
+    border-color: #ff9f46;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+div#termos h6, div#cardapio h6, div#cardapio h6, div#sobre h6, div#cadastro h6, div#recuperarsenha h6, div#politicas h6 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 5px;
+    font-size: 1.1em;
+}
+
+div#termos p, div#cardapio p, div#cardapio p, div#sobre p, div#cadastro p, div#recuperarsenha p, div#politicas p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4d4d4d;
+}
+
+/* formulario */
+
+.input-field input:focus+label {
+    color: #ff9f46 !important;
+}
+
+.row .input-field input:focus {
+    border-bottom: 1px solid #ff9f46 !important;
+    box-shadow: 0 1px 0 0 #ff9f46 !important
+}
+
+div#login i {
+    color: #ff9f46;
+}
+
+div#cadastro {
+    background-color: #fff;
+    max-width: 700px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #ff9f46;
+    border-radius: 10px;
+}
+
+/* Títulos mid */
+
+section#mid-termos h4, section#mid-recuperarsenha h4, section#mid-cadastrar h4, section#mid-sobre h4, section#mid-cardapio h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #ff9f46;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-left: 3px solid #ff9f46;
+    padding-left: 10px;
+    font-size: 2em;
+}
+
+div#cadastro h6 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-left: 3px solid #ff9f46;
+    padding-left: 10px;
+    font-size: 1.5em;
+}
+
+/*titulos*/
+
+h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-left: 3px solid #ff9f46;
+    padding-left: 8px;
+    font-size: 2.5em;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #ff9f46;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-left: 3px solid #ff9f46;
+    padding-left: 8px;
+    font-size: 2em
+}
+
+/* mid content */
+
+section#mid {
+    background-color: rgba(255, 236, 217, 0.7);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+section#categorias p, section#mid p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: #4d4d4d;
+}
+
+section#mid-termos, section#mid-recuperarsenha, section#mid-cadastrar, section#mid-sobre, section#mid-cardapio, section#mid-carrinho, section#mid-politicas {
+    background-image: url(../img/pizzafundo.png);
+    background-color: rgba(255, 236, 217, 0.7);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* cards cardapio */
+
+div#card1 {
+    max-height: 480px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+div#card1 h6{
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    text-align: center;
+}
+div#cardapio h5 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #000000;
+    font-size: 1.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+div#card1 p {
+    font-size: 1em;
+    text-align: left;
+}
+
+input#adicionar {
+    background-color: #ff9f46;
+    margin-top: 5px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+input#adicionar:hover {
+    background-color: #64dd17;
+}
+
+section#mid-cardapio .dropdown-content li>a, .dropdown-content li>span {
+    color: #ff9f46;
+}
+
+section#mid-cardapio .select-wrapper input.select-dropdown {
+    border-bottom: 1px solid #ff9f46;
+}
+
+/*redes sociais*/
+
+div#redes ul li {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-right: 15px;
+}
+
+div#redes ul li a {
+    background-image: url('../img/sprite-social.png');
+    display: block;
+    height: 100%;
+    text-indent: -99999em;
+}
+
+div#redes ul li:nth-child(1) a {
+    background-position: 0px 0px;
+}
+
+div#redes ul li:nth-child(2) a {
+    background-position: -64px 0px;
+}
+
+div#redes ul li:nth-child(3) a {
+    background-position: -128px 0px;
+}
+
+div#redes ul li:nth-child(1) a:hover {
+    background-position: 0px -32px;
+}
+
+div#redes ul li:nth-child(2) a:hover {
+    background-position: -64px -32px;
+}
+
+div#redes ul li:nth-child(3) a:hover {
+    background-position: -128px -32px;
+}
+
+/* classes */
+
+.banner-top {
+    background: url('../img/banner3.jpg') no-repeat center bottom;
+}
+
+.card {
+    max-height: 580px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card .card-content p {
+    font-size: 17px !important;
+}
+
+.card .card-content h4 {
+    color: #ff9f46;
+}
+
+.card-content a {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #4d4d4d !important;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.page-footer {
+    background-color: rgba(163, 98, 0, 0.8);
+}
+
+.page-footer .footer-copyright {
+    background-color: rgba(51, 51, 51, 0.4)
+}
+
+.page-footer h5, ul, .page-footer a {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #fff;
+    font-weight: 400;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+    section#categorias p, section#mid p, section#mid-termos p, section#mid-recuperarsenha p, section#mid-cadastrar p, section#mid-sobre p, section#mid-cardapio p, section#mid-carrinho p, section#mid-politicas p {
+        font-size: 1.1em;
+    }
+    section#categorias h3, section#mid h3, section#mid-termos h3, section#mid-recuperarsenha h3, section#mid-cadastrar h3, section#mid-sobre h3, section#mid-cardapio h3, section#mid-carrinho h3 {
+        font-size: 1.9em;
+        text-align: left;
+    }
+    section#categorias h4, section#mid h4, section#mid-termos h4, section#mid-recuperarsenha h4, section#mid-cadastrar h4, section#mid-sobre h4, section#mid-cardapio h4, section#mid-carrinho h4, section#mid-politicas h4 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+    section#categorias h5, section#mid h5, section#mid-termos h5, section#mid-recuperarsenha h5, section#mid-cadastrar h5, section#mid-sobre h5, section#mid-cardapio h5, section#mid-carrinho h5 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias h6, section#mid h6, section#mid-termos h6, section#mid-recuperarsenha h6, section#mid-cadastrar h6, section#mid-sobre h6, section#mid-cardapio h6, section#mid-carrinho h6, section#mid-politicas h6 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias a, section#mid a, section#mid-termos a, section#mid-recuperarsenha a, section#mid-cadastrar a, section#mid-sobre a, section#mid-cardapio a, section#mid-carrinho a {
+        font-size: 1.1em;
+    }
+    .page-footer h5 {
+        font-size: 0.9em;
+    }
+    .page-footer ul li, .footer-copyright, .page-footer a, div#redes ul li a {
+        font-size: 0.8em;
+    }
+    .modal {
+        max-width: 50%;
+    }
+    section#mid-termos, section#mid-recuperarsenha, section#mid-cadastrar, section#mid-sobre, section#mid-cardapio, section#mid-carrinho, section#mid-politicas {
+        background-image: url(../img/pizzafundo-1024.png) !important;
+        background-color: rgba(255, 236, 217, 0.7);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section#categorias p, section#mid p, section#mid-termos p, section#mid-recuperarsenha p, section#mid-cadastrar p, section#mid-sobre p, section#mid-cardapio p, section#mid-carrinho p {
+        font-size: 1.1em;
+    }
+    section#categorias h3, section#mid h3, section#mid-termos h3, section#mid-recuperarsenha h3, section#mid-cadastrar h3, section#mid-sobre h3, section#mid-cardapio h3, section#mid-carrinho h3 {
+        font-size: 1.9em;
+        text-align: left;
+    }
+    section#categorias h4, section#mid h4, section#mid-termos h4, section#mid-recuperarsenha h4, section#mid-cadastrar h4, section#mid-sobre h4, section#mid-cardapio h4, section#mid-carrinho h4 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+    section#categorias h5, section#mid h5, section#mid-termos h5, section#mid-recuperarsenha h5, section#mid-cadastrar h5, section#mid-sobre h5, section#mid-cardapio h5, section#mid-carrinho h5 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias h6, section#mid h6, section#mid-termos h6, section#mid-recuperarsenha h6, section#mid-cadastrar h6, section#mid-sobre h6, section#mid-cardapio h6, section#mid-carrinho h6 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias a, section#mid a, section#mid-termos a, section#mid-recuperarsenha a, section#mid-cadastrar a, section#mid-sobre a, section#mid-cardapio a, section#mid-carrinho a {
+        font-size: 1.1em;
+    }
+    .page-footer h5 {
+        font-size: 0.9em;
+    }
+    .page-footer ul li, .footer-copyright, .page-footer a, div#redes ul li a {
+        font-size: 0.8em;
+    }
+    .modal {
+        max-width: 60%;
+    }
+    section#mid-termos, section#mid-recuperarsenha, section#mid-cadastrar, section#mid-sobre, section#mid-cardapio, section#mid-carrinho, section#mid-politicas {
+        background-image: url(../img/pizzafundo-768.png) !important;
+        background-color: rgba(255, 236, 217, 0.7);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section#categorias p, section#mid p, section#mid-termos p, section#mid-recuperarsenha p, section#mid-cadastrar p, section#mid-sobre p, section#mid-cardapio p, section#mid-carrinho p {
+        font-size: 1.1em;
+    }
+    section#categorias h3, section#mid h3, section#mid-termos h3, section#mid-recuperarsenha h3, section#mid-cadastrar h3, section#mid-sobre h3, section#mid-cardapio h3, section#mid-carrinho h3 {
+        font-size: 1.9em;
+        text-align: left;
+    }
+    section#categorias h4, section#mid h4, section#mid-termos h4, section#mid-recuperarsenha h4, section#mid-cadastrar h4, section#mid-sobre h4, section#mid-cardapio h4, section#mid-carrinho h4 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+    section#categorias h5, section#mid h5, section#mid-termos h5, section#mid-recuperarsenha h5, section#mid-cadastrar h5, section#mid-sobre h5, section#mid-cardapio h5, section#mid-carrinho h5 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias h6, section#mid h6, section#mid-termos h6, section#mid-recuperarsenha h6, section#mid-cadastrar h6, section#mid-sobre h6, section#mid-cardapio h6, section#mid-carrinho h6 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias a, section#mid a, section#mid-termos a, section#mid-recuperarsenha a, section#mid-cadastrar a, section#mid-sobre a, section#mid-cardapio a, section#mid-carrinho a {
+        font-size: 1.1em;
+    }
+    .page-footer h5 {
+        font-size: 0.9em;
+    }
+    .page-footer ul li, .footer-copyright, .page-footer a, div#redes ul li a {
+        font-size: 0.8em;
+    }
+    .modal {
+        max-width: 100%;
+    }
+    section#mid-termos, section#mid-recuperarsenha, section#mid-cadastrar, section#mid-sobre, section#mid-cardapio, section#mid-carrinho, section#mid-politicas {
+        background-image: url(../img/pizzafundo-480.png) !important;
+        background-color: rgba(255, 236, 217, 0.7);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section#categorias p, section#mid p, section#mid-termos p, section#mid-recuperarsenha p, section#mid-cadastrar p, section#mid-sobre p, section#mid-cardapio p, section#mid-carrinho p {
+        font-size: 1.1em;
+    }
+    section#categorias h3, section#mid h3, section#mid-termos h3, section#mid-recuperarsenha h3, section#mid-cadastrar h3, section#mid-sobre h3, section#mid-cardapio h3, section#mid-carrinho h3 {
+        font-size: 1.9em;
+        text-align: left;
+    }
+    section#categorias h4, section#mid h4, section#mid-termos h4, section#mid-recuperarsenha h4, section#mid-cadastrar h4, section#mid-sobre h4, section#mid-cardapio h4, section#mid-carrinho h4 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+    section#categorias h5, section#mid h5, section#mid-termos h5, section#mid-recuperarsenha h5, section#mid-cadastrar h5, section#mid-sobre h5, section#mid-cardapio h5, section#mid-carrinho h5 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias h6, section#mid h6, section#mid-termos h6, section#mid-recuperarsenha h6, section#mid-cadastrar h6, section#mid-sobre h6, section#mid-cardapio h6, section#mid-carrinho h6 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+    section#categorias a, section#mid a, section#mid-termos a, section#mid-recuperarsenha a, section#mid-cadastrar a, section#mid-sobre a, section#mid-cardapio a, section#mid-carrinho a {
+        font-size: 1.1em;
+    }
+    .page-footer h5 {
+        font-size: 0.9em;
+    }
+    .page-footer ul li, .footer-copyright, .page-footer a, div#redes ul li a {
+        font-size: 0.8em;
+    }
+    .modal {
+        max-width: 100%;
+    }
+    section#mid-termos, section#mid-recuperarsenha, section#mid-cadastrar, section#mid-sobre, section#mid-cardapio, section#mid-carrinho, section#mid-politicas {
+        background-image: url(../img/pizzafundo-320.png) !important;
+        background-color: rgba(255, 236, 217, 0.7);
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+ul#lista{
+    color: #000000;
+    padding-top: 10px;
+}

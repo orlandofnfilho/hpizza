@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/pizzaico.ico" type="image/x-icon">
+    <title>House Pizza</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <!-- section#top -->
+    <section id="top" class="banner-top">
+        <header>
+            <!-- .navbar -->
+            <div class="navbar-fixed nav-wrapper">
+                <nav class="row">
+                    <!-- .col -->
+                    <div class="col s8 m9 l1 xl1 offset-xl1">
+                        <a href="index.html" class="logo"><img src="img/logohp.png" alt="logohp"></a>
+                    </div>
+                    <!--.col-->
+                    <!-- .col sidenav -->
+                    <div class="col s3 m2 l11 xl9 offset-s1 offset-xl1">
+                        <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i
+                                class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="Sobre.html" class="waves-effect "><i
+                                        class="material-icons left ">info</i>Sobre</a>
+                            </li>
+                            <li><a href="cardapio.html" class="waves-effect"><i
+                                        class="material-icons left ">restaurant_menu</i>Cardápio</a></li>
+                            <li><a href="carrinho.html" class="waves-effect "><i
+                                        class="material-icons left ">shopping_cart</i>Carrinho</a></li>
+                            <li><a href="#login" class="btn waves-effect light-green accent-4 modal-trigger"><i
+                                        class="material-icons left">login</i>Login</a></li>
+
+                        </ul>
+                        <!--ul .sidenav-->
+                    </div>
+                    <!--.class-->
+                </nav>
+                <!--.row-->
+            </div>
+            <!--navbar-->
+            <!-- sidenav mobile -->
+            <ul class="sidenav" id="mobile-menu">
+                <li><a href="https://api.whatsapp.com/send?text=[CONTEÚDO] Venha conhecer a House Pizza"
+                        class="modal-trigger waves-effect"><i class="material-icons left ">share</i>Compartilhar</a>
+                </li>
+                <li><a href="Sobre.html" class="waves-effect "><i class="material-icons left">info</i>Sobre</a>
+                </li>
+                <li><a href="cardapio.html" class="waves-effect "><i
+                            class="material-icons left ">restaurant_menu</i>Cardápio</a></li>
+                <li><a href="carrinho.html" class="waves-effect"><i
+                            class="material-icons left ">shopping_cart</i>Carrinho</a></li>
+                <li><a href="#login" class="btn waves-effect light-green accent-4 modal-trigger btn-large"><i
+                            class="material-icons left">login</i>Login</a></li>
+            </ul>
+            <!--.sidenav mobile-->
+            <!--modal login-->
+            <div class="row">
+                <div class="col s12 m4 offset-m4">
+                    <div class="modal" id="login">
+                        <h5 class="modal-close">&#10005;</h5>
+                        <div class="modal-content">
+                            <h4>Acesse seu perfil</h4>
+                            <br>
+                            <!--msg de erro-->
+                            <div id='msgError'></div>
+                            <br>
+                            <form name="modal-login" accept-charset="UTF-8" name="loginform">
+                                <!--email-->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">person</i>
+                                        <input type="email" id="emaillogin" maxlength="50" required>
+                                        <label id="emailloginLabel" for="emaillogin">Email</label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!--senha-->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input type="password" id="senhalogin" maxlength="25" required>
+                                        <label id="senhaloginLabel" for="senhalogin">Senha</label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!--recuperar-->
+                                <div class="recuperar">
+                                    <a href="recuperarsenha.html">Esqueceu sua senha?</a>
+                                </div>
+                                <!--cadastrar-->
+                                <div class="cadastrar">
+                                    <a href="cadastrar.html">Cadastre-se</a>
+                                </div>
+                                <br>
+                                <!--botão submit-->
+                                <div class="row"><input onclick='entrar()' value="Entrar"
+                                        class="btn light-green accent-4 btn-large"></div>
+                            </form>
+                        </div>
+                        <!--.modal-content-->
+                    </div>
+                    <!--.modal#login-->
+                </div>
+                <!--.col-->
+            </div>
+            <!--.row-->
+        </header>
+        <!--.navbar-->
+        <div id="letrasbanner" class="container">
+            <img src="img/letrasbanner.png" alt="letras banner" class="responsive-img">
+        </div>
+        <!-- #letrasbanner -->
+    </section>
+    <!--.top-->
+    <!--carrinho-->
+    <section id="mid-carrinho">
+        <div class="container" id="carrinho">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <p>O seu carrinho está vazio :(</p>
+                    </div>
+                    <div class="row">
+                        <p>Dê uma olhada em nosso cardápio, vamos lá não custa nada.</p>
+                        <a href="cardapio.html"><i class="material-icons left">restaurant_menu</i> Ir para o
+                            cardápio</a>
+                    </div>
+                </div>
+                <!--.container-->
+            </div>
+            <!--.row-->
+        </div>
+    </section>
+    <!--#mid-->
+    <!-- rodapé -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Informações -->
+                <div class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Informações</h5>
+                    </header>
+                    <ul>
+                        <li>Av. Caxangá, 3841 - Iputinga, Recife - PE, 50670-902</li>
+                        <li>Telefone: (81) 3333-3333 / (81) 9 9999-9999</li>
+                        <li>E-mail: contato@hpizza.com.br</li>
+                    </ul>
+                    <!--ul Informações-->
+                </div>
+                <!--.col-->
+                <!-- Horário -->
+                <div class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Horário</h5>
+                    </header>
+                    <ul>
+                        <li>Seg - Fechado</li>
+                        <li>Ter a Sex das 15:30 às 23:30</li>
+                        <li>Sáb e Dom das 12:00 às 23:30</li>
+                    </ul>
+                    <!-- ul Horário-->
+                    <a href="politicas-privacidade.html" id="politicaspriv">Políticas de Privacidade</a>
+                </div>
+                <!--.col-->
+                <!-- redes -->
+                <div id="redes" class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Siga-nos</h5>
+                    </header>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    <!--ul redes-->
+                </div>
+                <!--#redes-->
+            </div>
+            <!--.row-->
+        </div>
+        <!--.container-->
+        <!--coypright-->
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; 2021 HousePizza
+                <a href="#" class="right orange-text text-lighten-3">Active Cloud</a>
+            </div>
+        </div>
+        <!--.footer-copyright-->
+    </footer>
+
+    <!--.page-footer-->
+    <!-- botão para entrar em contato pelo whatsapp -->
+    <section id="contatozap">
+        <div class="fixed-action-btn">
+            <a id="compartilhar" href="https://api.whatsapp.com/send?phone=55819999999999&text=Ol%C3%A1!" alt="whatsapp"
+                class="btn-floating btn-large light-green accent-4">
+                <i class="material-icons">chat</i>
+            </a>
+        </div><!-- .fixed-action-btn-->
+    </section>
+    <!--#contatozap-->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>

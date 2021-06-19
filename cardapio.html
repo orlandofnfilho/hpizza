@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/pizzaico.ico" type="image/x-icon">
+    <title>House Pizza</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <!-- section#top -->
+    <section id="top" class="banner-top">
+        <header>
+            <!-- .navbar -->
+            <div class="navbar-fixed nav-wrapper">
+                <nav class="row">
+                    <!-- .col -->
+                    <div class="col s8 m9 l1 xl1 offset-xl1">
+                        <a href="index.html" class="logo"><img src="img/logohp.png" alt="logohp"></a>
+                    </div>
+                    <!--.col-->
+                    <!-- .col sidenav -->
+                    <div class="col s3 m2 l11 xl9 offset-s1 offset-xl1">
+                        <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i
+                                class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="Sobre.html" class="waves-effect "><i
+                                        class="material-icons left ">info</i>Sobre</a>
+                            </li>
+                            <li><a href="carrinho.html" class="waves-effect"><i
+                                        class="material-icons left ">restaurant_menu</i>Cardápio</a></li>
+                            <li><a href="carrinho.html" class="waves-effect "><i
+                                        class="material-icons left ">shopping_cart</i>Carrinho</a></li>
+                            <li><a href="#login" class="btn waves-effect light-green accent-4 modal-trigger"><i
+                                        class="material-icons left">login</i>Login</a></li>
+
+                        </ul>
+                        <!--ul .sidenav-->
+                    </div>
+                    <!--.class-->
+                </nav>
+                <!--.row-->
+            </div>
+            <!--navbar-->
+            <!-- sidenav mobile -->
+            <ul class="sidenav" id="mobile-menu">
+                <li><a href="https://api.whatsapp.com/send?text=[CONTEÚDO] Venha conhecer a House Pizza" class="modal-trigger waves-effect"><i
+                            class="material-icons left ">share</i>Compartilhar</a></li>
+                <li><a href="Sobre.html" class="waves-effect "><i class="material-icons left">info</i>Sobre</a>
+                </li>
+                <li><a href="cardapio.html" class="waves-effect "><i
+                            class="material-icons left ">restaurant_menu</i>Cardápio</a></li>
+                <li><a href="carrinho.html" class="waves-effect"><i
+                            class="material-icons left ">shopping_cart</i>Carrinho</a></li>
+                <li><a href="#login" class="btn waves-effect light-green accent-4 modal-trigger btn-large"><i
+                            class="material-icons left">login</i>Login</a></li>
+            </ul>
+            <!--.sidenav mobile-->
+            <!--modal login-->
+            <div class="row">
+                <div class="col s12 m4 offset-m4">
+                    <div class="modal" id="login">
+                        <h5 class="modal-close">&#10005;</h5>
+                        <div class="modal-content">
+                            <h4>Acesse seu perfil</h4>
+                            <br>
+                            <!--msg de erro-->
+                            <div id='msgError'></div>
+                            <br>
+                            <form name="modal-login" accept-charset="UTF-8" name="loginform">
+                                <!--email-->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">person</i>
+                                        <input type="email" id="emaillogin" maxlength="50" required>
+                                        <label id="emailloginLabel" for="emaillogin">Email</label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!--senha-->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input type="password" id="senhalogin" maxlength="25" required>
+                                        <label id="senhaloginLabel" for="senhalogin">Senha</label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!--recuperar-->
+                                <div class="recuperar">
+                                    <a href="recuperarsenha.html">Esqueceu sua senha?</a>
+                                </div>
+                                <!--cadastrar-->
+                                <div class="cadastrar">
+                                    <a href="cadastrar.html">Cadastre-se</a>
+                                </div>
+                                <br>
+                                <!--botão submit-->
+                                <div class="row"><input onclick='entrar()' value="Entrar"
+                                        class="btn light-green accent-4 btn-large"></div>
+                            </form>
+                        </div>
+                        <!--.modal-content-->
+                    </div>
+                    <!--.modal#login-->
+                </div>
+                <!--.col-->
+            </div>
+            <!--.row-->
+        </header>
+        <!--.navbar-->
+        <div id="letrasbanner" class="container">
+            <img src="img/letrasbanner.png" alt="letras banner" class="responsive-img">
+        </div>
+        <!-- #letrasbanner -->
+    </section>
+    <!--.top-->
+    <!--cardápio-->
+    <section id="mid-cardapio">
+        <div class="container" id="cardapio">
+            <!--Pizzas-->
+            <div class="row">
+                <header>
+                    <h4>Pizzas</h4>
+                </header>
+                <div class="row">
+                    <h5 id="classicas">Clássicas</h5>
+                </div>
+                <!-- Card  -->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/mussarela.jpg" alt="mussarela" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Mussarela</h6>
+                                </header>
+                                <form name="addmussarela" action="#" method="GET">
+                                    <select id="tammussarela">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="35">Média R$ 35,00</option>
+                                        <option value="48">Grande R$ 48,00</option>
+                                        <option value="55">Giga R$ 55,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tammussarela.value, 'Mussarela')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Mussarela <i class="material-icons right">close</i> </h6>
+                                <p>Queijo mussarela e oregano.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/Margherita.jpg" alt="Margherita" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Margherita</h6>
+                                </header>
+                                <form name="addmarg" action="#" method="GET">
+                                    <select id="tammarg">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="35">Média R$ 35,00</option>
+                                        <option value="48">Grande R$ 48,00</option>
+                                        <option value="55">Giga R$ 55,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tammarg.value, 'Margherita')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Margherita<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, tomate, oregano e manjericão.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/calabresa.jpg" alt="Calabresa" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Calabresa</h6>
+                                </header>
+                                <form name="addcalabresa" action="#" method="GET">
+                                    <select id="tamcalabresa">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="35">Média R$ 35,00</option>
+                                        <option value="48">Grande R$ 48,00</option>
+                                        <option value="55">Giga R$ 55,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamcalabresa.value, 'Calabresa')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Calabresa<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, calabresa e cebola, oregano.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/bauru.jpg" alt="Bauru" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Bauru</h6>
+                                </header>
+                                <form name="addpizza" action="#" method="GET">
+                                    <select id="tambauru">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="35">Média R$ 35,00</option>
+                                        <option value="48">Grande R$ 48,00</option>
+                                        <option value="55">Giga R$ 55,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit" onclick="addcarrinho(tambauru.value, 'Bauru')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Bauru<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, presunto, requeijão, oregano e tomate.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                </div>
+                <!--.row-->
+                <!--.card-->
+                <div class="row">
+                    <h5 id="especiais">Especiais</h5>
+                </div>
+                <!-- Card  -->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/3queijos.jpg" alt="3 Queijos" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">3 Queijos</h6>
+                                </header>
+                                <form name="add3queijos" action="#" method="GET">
+                                    <select id="tam3queijos">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="40">Média R$ 40,00</option>
+                                        <option value="58">Grande R$ 58,00</option>
+                                        <option value="65">Giga R$ 65,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tam3queijos.value, '3 Queijos')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">3 Queijos<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, requeijão, oregano e parmesão ralado.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/frangocomrequeijao.jpg" alt="Frango com Requeijão"
+                                    class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Frango com requeijão</h6>
+                                </header>
+                                <form name="addfrangoregueijao" action="#" method="GET">
+                                    <select id="tamfrangoregueijao">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="40">Média R$ 40,00</option>
+                                        <option value="58">Grande R$ 58,00</option>
+                                        <option value="65">Giga R$ 65,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamfrangoregueijao.value, 'Frango com Regueijão')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Frango com requeijão<i class="material-icons right">close</i>
+                                </h6>
+                                <p>Frango desfiado, cebola, oregano e requeijão.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/portuguesa.jpg" alt="Portuguesa" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Portuguesa</h6>
+                                </header>
+                                <form name="addportu" action="#" method="GET">
+                                    <select id="tamportu">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="40">Média R$ 40,00</option>
+                                        <option value="58">Grande R$ 58,00</option>
+                                        <option value="65">Giga R$ 65,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamportu.value, 'Portuguesa')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Portuguesa<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, presunto, ovo de codorna, azeitona preta, cebola, oregano e pimentão
+                                    verde.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/veggie.jpg" alt="Veggie" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Veggie</h6>
+                                </header>
+                                <form name="addveggie" action="#" method="GET">
+                                    <select id="tamveggie">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="40">Média R$ 40,00</option>
+                                        <option value="58">Grande R$ 58,00</option>
+                                        <option value="65">Giga R$ 65,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit" onclick="addcarrinho(tamveggie.value, 'Veggie')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Veggie<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, champignon, azeitona preta, cebola, oregano e pimentão verde.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                </div>
+                <!--.row-->
+                <div class="row">
+                    <h5 id="premium">Premium</h5>
+                </div>
+                <!--.card-->
+                <!-- Card 2 -->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/4queijos.jpg" alt="4 Queijos" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">4 Queijos</h6>
+                                </header>
+                                <form name="add4queijos" action="#" method="GET">
+                                    <select id="tam4queijos">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="48">Média R$ 48,00</option>
+                                        <option value="63">Grande R$ 63,00</option>
+                                        <option value="70">Giga R$ 70,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tam4queijos.value, '4 Queijos')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">4 Queijos<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, requeijão, gorgonzola, oregano e parmesão ralado.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/cornbacon.jpg" alt="Corn & Bacon"
+                                    class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Corn & Bacon</h6>
+                                </header>
+                                <form name="addcornbacon" action="#" method="GET">
+                                    <select id="tamcornbacon">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="48">Média R$ 48,00</option>
+                                        <option value="63">Grande R$ 63,00</option>
+                                        <option value="70">Giga R$ 70,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamcornbacon.value, 'Corn & Bacon')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Corn & Bacon<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, bacon, oregano e milho.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/pepperrock.jpg" alt="Pepperrock" class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Pepperrock</h6>
+                                </header>
+                                <form name="addpepper" action="#" method="GET">
+                                    <select id="tampepper">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="48">Média R$ 48,00</option>
+                                        <option value="63">Grande R$ 63,00</option>
+                                        <option value="70">Giga R$ 70,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tampepper.value, 'Pepperoni')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Pepperrock<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, pepperoni, azeitona preta, parmesão ralado, oregano, Cream Cheese e alho
+                                    granulado.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img class="activator" src="img/extravaganzza.jpg" alt="Extravaganzza"
+                                    class="responsive-img">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i
+                                        class="material-icons">visibility</i></a>
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="activator card-title">Extravaganzza</h6>
+                                </header>
+                                <form name="addextra" action="#" method="GET">
+                                    <select id="tamextra">
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="48">Média R$ 48,00</option>
+                                        <option value="63">Grande R$ 63,00</option>
+                                        <option value="70">Giga R$ 70,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamextra.value, 'Extravaganzza')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                            <div class="card-reveal">
+                                <h6 class="card-title">Extravaganzza<i class="material-icons right">close</i> </h6>
+                                <p>Mussarela, pepperoni, presunto, azeitona preta, champignon, cebola, oregano e
+                                    pimentão verde.</p>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                </div>
+                <!--.row-->
+            </div>
+            <!--.row-->
+            <!--Bebidas-->
+            <div class="row">
+                <header>
+                    <h4>Bebidas</h4>
+                </header>
+                <div class="row">
+                    <h5 id="classicas">Refrigerantes</h5>
+                </div>
+                <!-- Card 1 -->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/cocacola.jpg" alt="Coca-Cola" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Coca-Cola</h6>
+                                </header>
+                                <form name="addcocacola" action="#" method="GET">
+                                    <select id="tamcocacola" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="14">2L R$ 14,00</option>
+                                        <option value="10">1L R$ 10,00</option>
+                                        <option value="8">Lata 350ml R$ 8,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamcocacola.value, 'Coca-Cola')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/cocazero.jpg" alt="Coca-Zero" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Coca-Zero</h6>
+                                </header>
+                                <form name="addcocazero" action="#" method="GET">
+                                    <select id="tamcocazero" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="14">2L R$ 14,00</option>
+                                        <option value="10">1L R$ 10,00</option>
+                                        <option value="8">Lata 350ml R$ 8,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamcocazero.value, 'Coca-Cola Zero')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/fanta.jpg" alt="Fanta" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Fanta Laranja</h6>
+                                </header>
+                                <form name="addfanta" action="#" method="GET">
+                                    <select id="tamfanta" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="14">2L R$ 14,00</option>
+                                        <option value="10">1L R$ 10,00</option>
+                                        <option value="8">Lata 350ml R$ 8,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit" onclick="addcarrinho(tamfanta.value, 'Fanta')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/sprite.jpg" alt="Sprite" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Sprite</h6>
+                                </header>
+                                <form name="addsprite" action="#" method="GET">
+                                    <select id="tamsprite" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="14">2L R$ 14,00</option>
+                                        <option value="10">1L R$ 10,00</option>
+                                        <option value="8">Lata 350ml R$ 8,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit" onclick="addcarrinho(tamsprite.value, 'Sprite')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1---->
+                    </div>
+                    <!--.col-->
+                </div>
+                <!--.row-->
+                <div class="row">
+                    <h5 id="classicas">Sucos e água</h5>
+                </div>
+                <!--.card-->
+                <!-- Card 1 -->
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/dellvalemaracuja.jpg" alt="Del Valle Maracujá" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Del Valle Maracujá</h6>
+                                </header>
+                                <form name="adddelvallemaracuja" action="#" method="GET">
+                                    <select id="tamdelvallemaracuja" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="10">1L R$ 10,00</option>
+                                        <option value="6">Lata 350ml R$ 6,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamdelvallemaracuja.value, 'Del Valle Maracujá')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/dellvaleuva.jpg" alt="Del Vale Uva" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Del Valle Uva</h6>
+                                </header>
+                                <form name="adddelvalleuva" action="#" method="GET">
+                                    <select id="tamdelvalleuva" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="10">1L R$ 10,00</option>
+                                        <option value="6">Lata 350ml R$ 6,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamdelvalleuva.value, 'Del Valle Uva')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/aguasemgas.jpg" alt="Água sem gás" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Água</h6>
+                                </header>
+                                <form name="addagua" action="#" method="GET">
+                                    <select id="tamagua" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="5">1L R$ 5,00</option>
+                                        <option value="3">500ml R$ 3,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit" onclick="addcarrinho(tamagua.value, 'Água')"
+                                        value="Adicionar" class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--#card1-->
+                    </div>
+                    <!--.col-->
+                    <div class="col s12 m6 l3">
+                        <div class="card" id="card1">
+                            <div class="card-image">
+                                <img src="img/aguacomgas.jpg" alt="Água com gás" class="responsive-img">
+                            </div>
+                            <div class="card-content">
+                                <header>
+                                    <h6 class="card-title">Água com gás</h6>
+                                </header>
+                                <form name="addaguagas" action="carrinho.html" method="GET">
+                                    <select id="tamaguagas" required>
+                                        <option value="" disabled selected>Escolha o tamanho</option>
+                                        <option value="5">1L R$ 5,00</option>
+                                        <option value="3">500ml R$ 3,00</option>
+                                    </select>
+                                    <input id="adicionar" type="submit"
+                                        onclick="addcarrinho(tamaguagas.value, 'Água com gás')" value="Adicionar"
+                                        class="btn btn-large">
+                                </form>
+                            </div>
+                        </div>
+                        <!--card1-->
+                    </div>
+                    <!--.col-->
+                </div>
+                <!--.row-->
+            </div>
+            <!--.row-->
+        </div>
+        <!--.card-->
+    </section>
+    <!--#mid-->
+    <!-- rodapé -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Informações -->
+                <div class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Informações</h5>
+                    </header>
+                    <ul>
+                        <li>Av. Caxangá, 3841 - Iputinga, Recife - PE, 50670-902</li>
+                        <li>Telefone: (81) 3333-3333 / (81) 9 9999-9999</li>
+                        <li>E-mail: contato@hpizza.com.br</li>
+                    </ul>
+                    <!--ul Informações-->
+                </div>
+                <!--.col-->
+                <!-- Horário -->
+                <div class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Horário</h5>
+                    </header>
+                    <ul>
+                        <li>Seg - Fechado</li>
+                        <li>Ter a Sex das 15:30 às 23:30</li>
+                        <li>Sáb e Dom das 12:00 às 23:30</li>
+                    </ul>
+                    <!-- ul Horário-->
+                    <a href="politicas-privacidade.html" id="politicaspriv">Políticas de Privacidade</a>
+                </div>
+                <!--.col-->
+                <!-- redes -->
+                <div id="redes" class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Siga-nos</h5>
+                    </header>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    <!--ul redes-->
+                </div>
+                <!--#redes-->
+            </div>
+            <!--.row-->
+        </div>
+        <!--.container-->
+        <!--coypright-->
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; 2021 HousePizza
+                <a href="#" class="right orange-text text-lighten-3">Active Cloud</a>
+            </div>
+        </div>
+        <!--.footer-copyright-->
+    </footer>
+
+    <!--.page-footer-->
+    <!-- botão para entrar em contato pelo whatsapp -->
+    <section id="contatozap">
+        <div class="fixed-action-btn">
+            <a id="compartilhar" href="https://api.whatsapp.com/send?phone=55819999999999&text=Ol%C3%A1!" alt="whatsapp"
+                class="btn-floating btn-large light-green accent-4">
+                <i class="material-icons">chat</i>
+            </a>
+        </div><!-- .fixed-action-btn-->
+    </section>
+    <!--#contatozap-->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>

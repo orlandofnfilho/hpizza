@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/pizzaico.ico" type="image/x-icon">
+    <title>House Pizza</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <!-- section#top -->
+    <section id="top" class="banner-top">
+        <header>
+            <!-- .navbar -->
+            <div class="navbar-fixed nav-wrapper">
+                <nav class="row">
+                    <!-- .col -->
+                    <div class="col s8 m9 l1 xl1 offset-xl1">
+                        <a href="index.html" class="logo"><img src="img/logohp.png" alt="logohp"></a>
+                    </div>
+                    <!--.col-->
+                    <!-- .col sidenav -->
+                    <div class="col s3 m2 l11 xl9 offset-s1 offset-xl1">
+                        <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i
+                                class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="Sobre.html" class="waves-effect "><i
+                                        class="material-icons left ">info</i>Sobre</a>
+                            </li>
+                            <li><a href="cardapio.html" class="waves-effect"><i
+                                        class="material-icons left ">restaurant_menu</i>Cardápio</a></li>
+                            <li><a href="carrinho.html" class="waves-effect "><i
+                                        class="material-icons left ">shopping_cart</i>Carrinho</a></li>
+                            <li><a href="#login" class="btn waves-effect light-green accent-4 modal-trigger"><i
+                                        class="material-icons left">login</i>Login</a></li>
+
+                        </ul>
+                        <!--ul .sidenav-->
+                    </div>
+                    <!--.class-->
+                </nav>
+                <!--.row-->
+            </div>
+            <!--navbar-->
+            <!-- sidenav mobile -->
+            <ul class="sidenav" id="mobile-menu">
+                <li><a href="https://api.whatsapp.com/send?text=[CONTEÚDO] Venha conhecer a House Pizza" class="modal-trigger waves-effect"><i
+                            class="material-icons left ">share</i>Compartilhar</a></li>
+                <li><a href="Sobre.html" class="waves-effect "><i class="material-icons left">info</i>Sobre</a>
+                </li>
+                <li><a href="cardapio.html" class="waves-effect "><i
+                            class="material-icons left ">restaurant_menu</i>Cardápio</a></li>
+                <li><a href="carrinho.html" class="waves-effect"><i
+                            class="material-icons left ">shopping_cart</i>Carrinho</a></li>
+                <li><a href="#login" class="btn waves-effect light-green accent-4 modal-trigger btn-large"><i
+                            class="material-icons left">login</i>Login</a></li>
+            </ul>
+            <!--.sidenav mobile-->
+            <!--modal login-->
+            <div class="row">
+                <div class="col s12 m4 offset-m4">
+                    <div class="modal" id="login">
+                        <h5 class="modal-close">&#10005;</h5>
+                        <div class="modal-content">
+                            <h4>Acesse seu perfil</h4>
+                            <br>
+                            <!--msg de erro-->
+                            <div id='msgError'></div>
+                            <br>
+                            <form name="modal-login" accept-charset="UTF-8" name="loginform">
+                                <!--email-->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">person</i>
+                                        <input type="email" id="emaillogin" maxlength="50" required>
+                                        <label id="emailloginLabel" for="emaillogin">Email</label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!--senha-->
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input type="password" id="senhalogin" maxlength="25" required>
+                                        <label id="senhaloginLabel" for="senhalogin">Senha</label>
+                                        <br>
+                                    </div>
+                                </div>
+                                <!--recuperar-->
+                                <div class="recuperar">
+                                    <a href="recuperarsenha.html">Esqueceu sua senha?</a>
+                                </div>
+                                <!--cadastrar-->
+                                <div class="cadastrar">
+                                    <a href="cadastrar.html">Cadastre-se</a>
+                                </div>
+                                <br>
+                                <!--botão submit-->
+                                <div class="row"><input onclick='entrar()' value="Entrar"
+                                        class="btn light-green accent-4 btn-large"></div>
+                            </form>
+                        </div>
+                        <!--.modal-content-->
+                    </div>
+                    <!--.modal#login-->
+                </div>
+                <!--.col-->
+            </div>
+            <!--.row-->
+        </header>
+        <!--.navbar-->
+        <div id="letrasbanner" class="container">
+            <img src="img/letrasbanner.png" alt="letras banner" class="responsive-img">
+        </div>
+        <!-- #letrasbanner -->
+    </section>
+    <!--.top-->
+    <!--termos de uso-->
+    <section id="mid-termos">
+        <div class="container" id="termos">
+            <h4>Termos de uso</h4>
+            <br>
+            <p>Ao acessar as páginas da House Pizza na Internet, você está automaticamente concordando com estes
+                termos e condições:</p>
+            <br>
+
+            <p>Esses Termos de Uso (“Termo”) descrevem os termos e condições que regulam a sua relação, na
+                qualidade de cliente e usuário das plataformas digitais (“Usuário”), com a House Pizza</p>
+            <p>Por favor, leia atenciosamente esses Termo e nossa Política de Privacidade (“Política”) antes de
+                utilizar os serviços de nossa página na internet (www.hpizza.com.br) (“Site”) e aplicativo para
+                dispositivos móveis (“Aplicativo”). Para manifestar sua aceitação desse Termo e da Política o
+                Usuário deverá clicar na caixa de aceite “Aceitação dos Termos e Condições e da
+                Política de Privacidade” ao criar um cadastro em nosso Site e/ou Aplicativo. Caso não concorde
+                com todas as disposições ou condições estabelecidas nesse Termo e/ou na Política, o Usuário
+                reconhece que não será possível utilizar os serviços de nosso Site ou Aplicativo ou criar uma
+                conta cadastral com a House Pizza</p>
+            <h6>SERVIÇOS OFERECIDOS ATRAVÉS DAS PÁGINAS DE INTERNET DA House Pizza</h6>
+            <p>
+                A House Pizza oferece em seu site e Aplicativo serviços para: pedidos online de pizza para
+                entrega em endereço informado pelo Usuário e pedidos online de pizza para busca em
+                estabelecimento escolhido pelo Usuário. Em qualquer um desses serviços, o pagamento poderá ser
+                efetuado através da modalidade on-line ou no ato da entrega, através de cartão de crédito,
+                cartão de débito, vale (ticket) refeição ou em dinheiro.
+                O Site e o Aplicativo da House Pizza, principalmente, o domínio House PizzaL, podem conter links
+                para outros websites. Esse Termo e a Política não se aplicam a terceiros e a DOMINO’S não se
+                responsabiliza pela interação do Usuário com quaisquer outros sites ou plataforma digitais.
+                Antes de utilizar qualquer site de terceiros,recomendamos que o Usuário leia os respectivos
+                termos de uso e política de privacidade disponíveis.
+            </p>
+            <h6>INFORMAÇÕES DE PRODUTOS</h6>
+            <p>
+                Nem todos os produtos apresentados no Site e Aplicativo da House Pizza e em nossas lojas estão
+                disponíveis para compra online e alguns produtos podem não estar disponíveis nas lojas físicas.
+                Além disso, alguns produtos podem estar temporariamente indisponíveis no Site, Aplicativo ou em
+                determinadas lojas.
+                As informações sobre preços e disponibilidade de produtos estão sujeitas a alterações sem aviso
+                prévio. Os preços dos produtos nos canais online podem ser diferentes daqueles praticados em
+                lojas físicas ou outros canais de vendas.
+                A House Pizza trabalha e se esforça para que as fotos apresentadas nos canais online sejam da
+                melhor qualidade possível. Mesmo assim, é possível que algumas cores e ilustrações tenham um tom
+                diferente na tela de seu dispositivo eletrônico. Por isso, sua exatidão não pode ser garantida
+                pelos canais online e todas as imagens em nosso Site e Aplicativo são meramente ilustrativas.
+            </p>
+            <h6>UTILIZAÇÃO DOS SERVIÇOS DAS PÁGINAS DE INTERNET DA House Pizza</h6>
+            <p>
+                Para usar os serviços do Site e do Aplicativo da House Pizza o Usuário deverá se cadastrar em
+                nosso Site ou Aplicativo. Ao criar um cadastro, o Usuário fornecerá dados pessoais, que serão
+                processados conforme nossa Política, e declara que tais dados pessoais são verídicos. Além
+                disso, o Usuário criará uma senha pessoal de acesso.
+                Nunca compartilhe sua senha pessoal de acesso com terceiros. O Usuário é inteiramente
+                responsável por manter a segurança de sua conta ou por ações de terceiros que obteve informações
+                de sua conta (seja através de seu compartilhamento, direto ou indireto, ou através de um vírus
+                ou um software malicioso em seu computador).
+                O uso adequado dos serviços das páginas de internet da House Pizza está condicionado à
+                manutenção da atualidade e à veracidade dos dados fornecidos pelo Usuário. Ademais,o uso está
+                condicionado também às leis e regulações aplicáveis, à boa-fé, a esse Termo e à Política.
+                É obrigação do Usuário usar os serviços da House Pizza sempre de boa-fé, fornecer informações
+                completas e verídicas sobre seu pedido e o local de entrega, realizar o pagamento integral dos
+                valores para os produtos solicitados através das páginas de internet da House Pizza nas formas
+                disponibilizadas pelas House Pizza (modalidade online ou no ato da entrega através de cartão de
+                crédito, cartão de débito, vale (ticket) refeição ou dinheiro), e estar presente no endereço de
+                entrega para receber os produtos.
+                Todas as transações processadas no pagamento on line pelo Site e/ou Aplicativo passarão por
+                análise por uma ferramenta de controle de fraude processada por um parceiro comercial da House
+                Pizza, que indica a probabilidade da respectiva transação ser fraudulenta
+                A ferramenta de controle de fraude não garante a prevenção de transações fraudulentas, nem
+                contra Chargebacks ou multas resultantes. A House Pizza se reserva o direito de cancelar
+                transações em relação às quais tenha motivos razoáveis para suspeitar serem fraudulentas ou
+                envolverem outras atividades criminosas, mesmo que a ferramenta de controle de fraude não
+                bloqueie a transação.
+                O Usuário concorda em indenizar e isentar a House Pizza contra todas e quaisquer reclamações ou
+                danos resultantes do uso indevido dos serviços de nossas páginas de internet ou das informações
+                que o Usuário envia através desses serviços, incluindo lucros cessantes, custos judiciais e
+                honorários advocatícios.
+                Ao acessar e o utilizar os serviços de nosso Site ou Aplicativo, a House Pizza não se
+                responsabiliza: pela compatibilidade entre as nossas páginas de internet e Aplicativo com os
+                dispositivos utilizados pelo Usuário; pela capacidade técnica do Usuário ao utilizar nosso Site
+                ou Aplicativo; e nem pela conexão à internet do usuário.
+                A House Pizza, a seu exclusivo critério, pode suspender utilização dos serviços pelo Usuário
+                e/ou cancelar ou suspender a conta do Usuário, de forma permanente ou temporária, caso o Usuário
+                (i) viole qualquer disposição destes Termos de Uso; ou (ii) utilize os serviços de qualquer
+                forma que possa impactar negativamente as atividades da House Pizza ou que viole a legislação
+                aplicável. A House Pizza também pode suspender a utilização dos serviços pelo Usuário e/ou
+                cancelar ou suspender a conta do Usuário caso decida interromper o oferecimento dos serviços em
+                determinada região, por qualquer motivo.
+            </p>
+            <h6>PROPRIEDADE INTELECTUAL</h6>
+            <p>Todos os serviços (incluindo o Site e Aplicativo) e todos os direitos, marcas registradas,
+                direitos autorais, patentes, segredos de negócio e todos outros direitos de propriedade
+                intelectual, títulos e interesses relacionados, bem como todo material visual contido em nossos
+                canais online como logotipos, gráficos, imagens, textos, ilustrações, fotografias, videoclipes e
+                flashes, entre outros, são de propriedade da House Pizza PIZZA BRASIL ou dos licenciantes da
+                House Pizza. Ao acessar o site, o Usuário recebe uma licença limitada, não exclusiva e não
+                onerosa tão somente para visualizar os conteúdos da House Pizza. Tais conteúdos não poderão ser
+                reproduzidos, copiados, publicados, transmitidos, vendidos, distribuídos ou modificados, sem
+                prévia autorização expressa e formal da House Pizza.</p>
+            <h6>DISPOSIÇÕES GERAIS</h6>
+            <p>
+                A House Pizza poderá, a seu exclusivo critério, atualizar e/ou alterar as funcionalidades dos
+                serviços de do Site e Aplicativo, no todo ou em parte. O Usuário concorda que não tem nenhuma
+                expectativa de que os serviços do Site ou Aplicativo funcionem ou continuem a funcionar de uma
+                maneira específica, ou sejam compatíveis com um conjunto particular de hardwares ou softwares de
+                terceiros.
+                A House Pizza poderá, a seu exclusivo critério, deixar de oferecer os serviços do Site ou
+                Aplicativo como um todo ou para uma determinada região. Caso a House Pizza decida deixar de
+                oferecer os serviços do Site ou Aplicativo, por qualquer motivo, o Usuário não terá direito a
+                qualquer recurso, compensação ou reembolso.
+                As informações fornecidas pela House Pizza têm caráter meramente informativo e a House Pizza não
+                se responsabiliza pelo uso que o Usuário possa fazer dessas informações. A House Pizza se
+                reserva o direito de corrigir erros e omissões, modificando e atualizando as informações a
+                qualquer hora, sem comunicação prévia.
+            </p>
+            <h6>SEU ACEITE A ESSES TERMOS DE USO</h6>
+            <p>
+                Ao marcar a caixa com o item “Aceitação dos Termos e Condições e da Política de Privacidade” ao
+                criar um cadastro no site da House Pizza o Usuário declara que é maior de 18 anos e que consente
+                com os termos desses Termos de Uso.
+                Esse Termo poderá ser atualizado periodicamente, a exclusivo critério da House Pizza.
+                Recomendamos aos Usuários que verifiquem o Termo disponível no o Site e no Aplicativo de tempos
+                em tempos para estarem cientes e informados em caso de alteração nos termos e condições que
+                regulam a relação da House Pizza com seus Usuários.
+                Em caso de atualização que altere o Termo de modo substancial, a House Pizza enviará um e-mail
+                para informar aos Usuários cadastrados da modificação.
+            </p>
+        </div>
+        <!--.container # temros-->
+    </section>
+    <!--#mid-->
+    <!-- rodapé -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Informações -->
+                <div class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Informações</h5>
+                    </header>
+                    <ul>
+                        <li>Av. Caxangá, 3841 - Iputinga, Recife - PE, 50670-902</li>
+                        <li>Telefone: (81) 3333-3333 / (81) 9 9999-9999</li>
+                        <li>E-mail: contato@hpizza.com.br</li>
+                    </ul>
+                    <!--ul Informações-->
+                </div>
+                <!--.col-->
+                <!-- Horário -->
+                <div class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Horário</h5>
+                    </header>
+                    <ul>
+                        <li>Seg - Fechado</li>
+                        <li>Ter a Sex das 15:30 às 23:30</li>
+                        <li>Sáb e Dom das 12:00 às 23:30</li>
+                    </ul>
+                    <!-- ul Horário-->
+                    <a href="politicas-privacidade.html" id="politicaspriv">Políticas de Privacidade</a>
+                </div>
+                <!--.col-->
+                <!-- redes -->
+                <div id="redes" class="col s12 m4 l3 offset-l1">
+                    <header>
+                        <h5>Siga-nos</h5>
+                    </header>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    <!--ul redes-->
+                </div>
+                <!--#redes-->
+            </div>
+            <!--.row-->
+        </div>
+        <!--.container-->
+        <!--coypright-->
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; 2021 HousePizza
+                <a href="#" class="right orange-text text-lighten-3">Active Cloud</a>
+            </div>
+        </div>
+        <!--.footer-copyright-->
+    </footer>
+    <!--.page-footer-->
+    <!-- botão para entrar em contato pelo whatsapp -->
+    <section id="contatozap">
+        <div class="fixed-action-btn">
+            <a id="compartilhar" href="https://api.whatsapp.com/send?phone=55819999999999&text=Ol%C3%A1!" alt="whatsapp"
+                class="btn-floating btn-large light-green accent-4">
+                <i class="material-icons">chat</i>
+            </a>
+        </div><!-- .fixed-action-btn-->
+    </section>
+    <!--#contatozap-->
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>
