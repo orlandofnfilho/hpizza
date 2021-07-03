@@ -43,6 +43,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
     # Clonar o repositório
     $ git clone https://github.com/orlandolilo/hpizza
+    
 ```
 ---
 <p align="center">Desenvolvido por José Orlando Ferreira do N. Filho</p>
