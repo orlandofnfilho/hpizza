@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-   <a href="https://projeto-hpizza.netlify.app/">Deploy</a>
+   <a href="https://hpizza.netlify.app/">Deploy</a>
 </h3>
 
 <h4 align="center"> 
