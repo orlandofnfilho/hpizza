@@ -3,11 +3,11 @@
 </h1>
 
 <h3 align="center">
-   <a href="https://hpizza.netlify.app/">Online Demo</a>
+   <a href="https://hpizza.netlify.app/">Deploy</a>
 </h3>
 
 <h4 align="center"> 
-	Status: 🚧Em desenvolvimento...🚧
+	Status: ✅Finalizado✅
 </h4>
 
 # Indice
