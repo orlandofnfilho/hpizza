@@ -7,7 +7,7 @@
 </h3>
 
 <h4 align="center"> 
-	Status: ✅Finalizado✅
+	Status: Finalizado✅
 </h4>
 
 # Indice
