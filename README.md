@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="img/logohp.png">
+    <img src="hpizza-frontend/img/logohp.png">
 </h1>
 
 <h3 align="center">
